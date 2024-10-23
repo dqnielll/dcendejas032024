@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing One</title>
+    <style>
+        html{color-scheme: dark;
+        background-color: grey;}
+        h1{
+            text-align: center;
+            background-color: green;
+            border: 2px solid rgb(29, 182, 60);
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Canvas Arc Fill</h1>
+
+    <canvas id="canvasone"></canvas>
+
+    <script>
+        // Create Canvas
+        const canvasOne = window.document.querySelector('#canvasone');
+        const ctx = canvasOne.getContext('2d');
+        alert
+
+
+
+        // Configure Canvas
+        canvasOne.width = 400;
+        canvasOne.height = 400;
+        canvasOne.style.border = '5px solid black';
+        canvasOne.style.margin = 'auto';
+        canvasOne.style.display = 'block';
+        canvasOne.style.backgroundColor = 'rgb(29, 182, 60)';
+
+        // Draw Square Head
+        ctx.strokeStyle = 'black';
+        ctx.fillStyle = 'rgb(255, 205, 84)';
+        ctx.lineWidth = 20;
+
+        // Make Left Eye
+        ctx.fillStyle = 'black';
+        ctx.beginPath();
+        ctx.moveTo(35,35);
+        ctx.lineTo(35,75)
+        ctx.stroke();
+    </script>
+</body>
+</html>
