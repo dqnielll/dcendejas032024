@@ -28,11 +28,11 @@ h1{
         flex-direction: column;
     }
     button{
-        background-color: white;
-        color: red;
+        /* background-color: white;
+        color: red; */
         margin: .5rem;
         padding: .5rem;
-        border: 1px solid grey;
+        /* border: 1px solid grey; */
     }
 
     </style>
@@ -48,7 +48,8 @@ h1{
     <button id="createtriangle">Create Triangle</button>
     <button id="createarc">Create Arc</button>
     <button id="createstar">Create Star</button>
-    <button id="undodraw">Undo</button>
+    <button id="undoDraw">undoDraw</button>
+    <button id="clear">Clear</button>
 
 
 
@@ -110,15 +111,15 @@ const canvas = window.document.querySelector('#canvas');
 
 
 
-    const btnCreateRectangle = window.document.querySelector('#createrectangle');
-    btnCreateRectangle.addEventListener('click', function() {        
-        // window.alert('Create Rectangle' )
-    // Draw the Rectangle
+    // const btnCreateRectangle = window.document.querySelector('#createrectangle');
+    // btnCreateRectangle.addEventListener('click', function() {        
+    //     // window.alert('Create Rectangle' )
+    // // Draw the Rectangle
 
 
 
     
-    })
+    // })
 
 
     const btnCreateTriangle = window.document.querySelector('#createtriangle');
@@ -143,11 +144,21 @@ const canvas = window.document.querySelector('#canvas');
         ctx.stroke();
 
 
-    })
+    });
     
 
     const btnCreateArc = window.document.querySelector('#createarc');
-    btnCreateArc.addEventListener('click', function() {window.alert('Create Arc' )})
+    btnCreateArc.addEventListener('click', function(){
+    // function() {window.alert('Create Arc' )}
+
+        ctx.beginPath();
+        ctx.arc(100, 100, 60, 0 , Math.PI * 2, false);
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+
+
+});
 
 
     const btnCreateStar = window.document.querySelector('#createstar');
@@ -176,20 +187,43 @@ const canvas = window.document.querySelector('#canvas');
 
 
     
-    })
+    });
 
 
-    const btnUndoDraw = window.document.querySelector('#undodraw');
-    btnUndoDraw.addEventListener('click', function() {window.alert('Undo' )})
+    const btnundoDraw = window.document.querySelector('#undodraw');
+    btnundoDraw.addEventListener('click', function() {
+    window.alert('UndoDraw');
 
+
+
+
+
+
+
+});
+    // const btnClear = window.document.querySelector('#clear');
+//    window.alert(btnClear)
+   
+    btnClear.addEventListener('click', function(){
+    window.alert('clear');
+        ctx.clearRect(0,0, canvas.width, canvas.height);
+
+
+
+
+
+
+});
+ 
 
     // Style each button
     btnCreateRectangle.style.backgroundColor = 'white';
-    btnCreateRectangle.style.backgroundColor = 'grey';
+    // btnCreateRectangle.style.backgroundColor = 'grey';
     btnCreateTriangle.style.backgroundColor = 'black';
     btnCreateArc.style.backgroundColor = 'blue';
     btnCreateStar.style.backgroundColor = 'orange';
-    btnUndoDraw.style.backgroundColor = 'yellow';
+    // btnUndoDraw.style.backgroundColor = 'yellow';
+    btnClear.style.backgroundColor = 'red';
 
 
 
