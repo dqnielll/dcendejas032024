@@ -111,15 +111,29 @@ const canvas = window.document.querySelector('#canvas');
 
 
 
-    // const btnCreateRectangle = window.document.querySelector('#createrectangle');
-    // btnCreateRectangle.addEventListener('click', function() {        
-    //     // window.alert('Create Rectangle' )
-    // // Draw the Rectangle
+    const btnCreateRectangle = window.document.querySelector('#createrectangle');
+    btnCreateRectangle.addEventListener('click', function() {        
+        // window.alert('Create Rectangle' )
+     // Draw the Rectangle
+
+     ctx.strokeStyle = 'black';
+        ctx.lineWidth = "5";
+        ctx.lineCap = 'round'; // butt rounded square
+        ctx.lineJoin = 'miter'; // belevel or mitter
+
+        // Draw the line
+        ctx.beginPath();
+        ctx.moveTo(100,100);
+        ctx.lineTo(300,100);
+        ctx.lineTo(300,200);
+        ctx.lineTo(100,200);
+        ctx.closePath();
+        ctx.stroke();
 
 
 
     
-    // })
+    })
 
 
     const btnCreateTriangle = window.document.querySelector('#createtriangle');
@@ -180,7 +194,6 @@ const canvas = window.document.querySelector('#canvas');
     ctx.lineTo(15,160);
     ctx.lineTo(120,280);
     ctx.lineTo(40,360);
-
     ctx.stroke();
 
 

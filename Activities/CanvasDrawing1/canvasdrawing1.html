@@ -44,10 +44,29 @@
 
         // Make Left Eye
         ctx.fillStyle = 'black';
+        // ctx.beginPath();
+        // ctx.moveTo(35,35);
+        // ctx.lineTo(35,75)
+        // ctx.lineTo(100,75)
+        // ctx.stroke();
         ctx.beginPath();
-        ctx.moveTo(35,35);
-        ctx.lineTo(35,75)
+        ctx.moveTo(75,75);
+        ctx.lineTo(125,75);
+        ctx.lineTo(125,125);
+        ctx.lineTo(75,125);
+        ctx.fill();
+        ctx.closePath();
         ctx.stroke();
+
+        // Make Right Eye
+        ctx.beginPath();
+        ctx.moveTo(250,75);
+        ctx.lineTo(100,50);
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+
+
     </script>
 </body>
 </html>
