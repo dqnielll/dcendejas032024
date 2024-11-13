@@ -13,6 +13,7 @@
 Note
 primary, secondary, tertiary, quaternary, quinary, senary, septenary, octonary, nonary, denary, duodenary, etc.
 */
+/* *{cursor: none;} */
 html {
 scroll-behavior: smooth;
 background-color: white;
@@ -103,6 +104,13 @@ transform: rotate(15deg);
 #pagenav a:hover{
     text-decoration: underline;
 }
+#semester1 a{
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+#semester1 a:hover{
+    text-decoration: underline;
+}
 #media {
     background-color: var(--color-primary);
 
@@ -120,7 +128,7 @@ transform: rotate(15deg);
 
 }
 #career h2{
-    color: var(--color-secondary);
+    color: var(--color-primary);
 }
 #career li{
 list-style-type: none;
@@ -129,17 +137,15 @@ margin: .3rem 0;
 /* border-left: 5px solid var(--color-primary);
 padding: .4rem;
 text-indent: 1px; */
-border-left:.20rem solid var(--color-secondary);
+border-left:.25rem solid var(--color-quinary);
 
 }
 #career a {
-    color: var(--color-quinary);
+    color: var(--color-secondary);
     text-decoration: none;
 }
 #career a:hover{
     color: var(--color-quinary);
-text-decoration: underline;
-color: var(--color-primary);
 transition: all .5s;
 
 }
@@ -282,7 +288,7 @@ padding: 1rem;
     |
     <a href="#semester1">Semester 1</a>
     |
-    <a href="#semester2">Semester 2</a>
+    <!-- <a href="#semester2">Semester 2</a> -->
 </nav>
 </div>
 </header>
@@ -301,13 +307,13 @@ padding: 1rem;
 <a name="career"></a>
 <h2>Career</h2>
 <ul>
-    <li><a target="_new" href="Career/Template Letter of Introduction.pdf">Letter of Introduction</a></li>
-    <li><a target="_new" href="Career/Template Resume.pdf">Resume</a></li>
-    <li><a target="_new" href="Career/Template References.pdf">Refrences</a></li>
-    <li><a target="_new" href="Career/Sample Application.pdf">Job Application</a></li>
-    <li><a target="_new" href="Career/Template Career Action Plan.pdf">Career Plan</a></li>
-    <li><a target="_new" href="#Career/Work Sample">Work Samples</a></li>
-    <li><a target="_new" href="#Career/Certificate">Certificate</a></li>
+    <li><a target="_new" href="Career/Template Letter of Introduction.pdf"> &nbsp Letter of Introduction</a></li>
+    <li><a target="_new" href="Career/Template Resume.pdf"> &nbsp Resume</a></li>
+    <li><a target="_new" href="Career/Template References.pdf"> &nbsp Refrences</a></li>
+    <li><a target="_new" href="Career/Sample Application.pdf">  &nbsp    Job Application</a></li>
+    <li><a target="_new" href="Career/Template Career Action Plan.pdf">  &nbsp   Career Plan</a></li>
+    <li><a target="_new" href="#Career/Work Sample">   &nbsp     Work Samples</a></li>
+    <li><a target="_new" href="#Career/Certificate">    &nbsp    Certificate</a></li>
 </ul>
 </div>
 </section>
@@ -338,7 +344,7 @@ padding: 1rem;
 <a name="semester1"></a>
 <h2>Semester1</h2>
 <ul>
-    <li>A001</li>
+    <li><a href="Activities/CanvasSmileyFace/canvassmileyface.html" target="_new">Canvas Smiley Face 001</a></li>
     <li>A003</li>
     <li>A004</li>
 </ul>
