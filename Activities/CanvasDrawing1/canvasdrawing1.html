@@ -68,7 +68,7 @@
         ctx.closePath();
         ctx.stroke();
 
-
+        //make nose
         ctx.beginPath();
         ctx.moveTo(155,190);
         ctx.lineTo(260,190);
@@ -78,8 +78,40 @@
         ctx.stroke();
         ctx.closePath();
 
+        // ctx.strokeStyle = 'red';
+        // Make Mouth
+        ctx.beginPath();
+        ctx.moveTo(100,230);
+        ctx.lineTo(325,230);
+        ctx.lineTo(325,270);
+        ctx.lineTo(100,270);
+        ctx.fill(); 
+        ctx.stroke();
+        ctx.closePath();
 
+        // Other Parts
+        ctx.lineWidth = 10;
+        ctx.beginPath();
+        ctx.moveTo(100,275);
+        ctx.lineTo(155,275);
+        ctx.lineTo(155,320);
+        ctx.lineTo(100,320);
+        ctx.fill(); 
+        ctx.stroke();
+        ctx.closePath();
 
+        // Other Parts
+        ctx.lineWidth = 5;
+
+        ctx.beginPath();
+        ctx.moveTo(260,275);
+        ctx.lineTo(332,275);
+        ctx.lineTo(332,320);
+        ctx.lineTo(265,320);
+        ctx.lineTo(265,275);
+        ctx.fill(); 
+        ctx.stroke();
+        ctx.closePath();
 
     </script>
 </body>
