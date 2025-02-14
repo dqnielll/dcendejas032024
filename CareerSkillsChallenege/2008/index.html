@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+/* Mobile First Design */
+*{transition: all 2s;}
+body{
+background-color: slateblue;
+padding-top: 1rem;
+}
+#container{
+    max-width: 1200px;
+    background-color: cadetblue;
+    margin: auto;
+    border: 1px solid black;
+}
+nav{
+    background-color: rgb(0, 0, 0);
+    min-height: 5rem;
+    padding: 1rem;
+    grid-area: nav;
+    color: lightblue;
+}
+header{
+    background-color: rgb(0, 45, 46);
+    min-height: 5rem;
+    padding: 1rem;
+    grid-area: hea;
+    color: white;
+}
+div#media{
+    background-color:rgb(0, 66, 68);
+    min-height: 5rem;
+    padding: 1rem;
+    grid-area: med;
+}
+
+main{
+    background-color: rgb(0, 74, 76);
+    min-height: 5rem;
+    padding: 1rem;
+    grid-area: mai;
+}
+
+aside{
+    background-color: rgb(23, 139, 143);
+    min-height: 5rem;
+    padding: 1rem;
+    grid-area: asi;
+}
+
+footer{
+    background-color: cadetblue;
+    min-height: 5rem;
+    padding: 1rem;
+    grid-area: foo;
+}
+
+div#subfooter{
+    background-color: rgb(210, 253, 255);
+    min-height: 5rem;
+    padding: 1rem;
+    grid-area: sub;
+}
+
+/* Tablet and Desktop Styles */
+/* Media Queries */
+@media screen and (min-width:480px)
+{
+    body{background-color: rgb(0, 17, 17); transition: all;}
+    #container{
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+        "hea hea hea hea"
+        "nav nav nav nav"
+        "med med med med"
+        "mai mai mai asi"
+        "foo foo foo foo"
+        "sub sub sub sub"
+        ;
+        transition: all 2s;
+        gap: 0;
+        transition: .5s;
+    }
+    div#media{
+        min-height: 10rem;
+        transition: all 2s;
+    }
+}
+@media screen and (min-width:768px)
+{
+    body{background-color: rgb(4, 76, 78); transition: all 2s;}
+    #container{
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+        "hea hea hea hea"
+        "nav nav nav nav"
+        "med med med med"
+        "mai mai mai asi"
+        "foo foo foo asi"
+        "sub sub sub sub"
+        ;
+        
+    }
+
+}
+@media screen and (min-width:1200px)
+{
+
+    body{background-color: rgb(4, 94, 97); transition: all 2s;}
+    header{min-height: 10rem; transition: all 2s;}
+    div#media{min-height: 18rem; transition: all 2s;}
+    main{min-height: 20rem; transition: all 2s;}
+
+
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <nav>navigation</nav>
+        <header>header</header>
+        <div id="media">Media</div>
+        <main>Main</main>
+        <aside>Aside</aside>
+        <footer>Footer</footer>
+        <div id="subfooter">subFooter</div>
+
+
+    </div>
+</body>
+</html>

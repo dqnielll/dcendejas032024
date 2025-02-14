@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing One</title>
+    <style>
+        html{color-scheme: dark;
+        background-color: grey;}
+        h1{
+            text-align: center;
+            background-color: green;
+            border: 2px solid rgb(29, 182, 60);
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Canvas Drawing One</h1>
+
+    <canvas id="canvasone"></canvas>
+
+    <script>
+        // Create Canvas
+        const canvasOne = window.document.querySelector('#canvasone');
+        const ctx = canvasOne.getContext('2d');
+        
+
+
+
+        // Configure Canvas
+        canvasOne.width = 400;
+        canvasOne.height = 400;
+        canvasOne.style.border = '5px solid black';
+        canvasOne.style.margin = 'auto';
+        canvasOne.style.display = 'block';
+        canvasOne.style.backgroundColor = 'rgb(29, 182, 60)';
+
+        // Draw Square Head
+        ctx.strokeStyle = 'black';
+        ctx.fillStyle = 'rgb(255, 205, 84)';
+        ctx.lineWidth = 20;
+
+        // Make Left Eye
+        ctx.fillStyle = 'black';
+        // ctx.beginPath();
+        // ctx.moveTo(35,35);
+        // ctx.lineTo(35,75)
+        // ctx.lineTo(100,75)
+        // ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(50,75);
+        ctx.lineTo(150,75);
+        ctx.lineTo(150,175);
+        ctx.lineTo(50,175);
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+
+        // Make Right Eye
+        ctx.beginPath();
+        ctx.moveTo(275,75);
+        ctx.lineTo(375,75);
+        ctx.lineTo(375,175);
+        ctx.lineTo(275,175);
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+
+        //make nose
+        ctx.beginPath();
+        ctx.moveTo(155,190);
+        ctx.lineTo(260,190);
+        ctx.lineTo(260,225);
+        ctx.lineTo(155,225);
+        ctx.fill(); 
+        ctx.stroke();
+        ctx.closePath();
+
+        // ctx.strokeStyle = 'red';
+        // Make Mouth
+        ctx.beginPath();
+        ctx.moveTo(100,230);
+        ctx.lineTo(325,230);
+        ctx.lineTo(325,270);
+        ctx.lineTo(100,270);
+        ctx.fill(); 
+        ctx.stroke();
+        ctx.closePath();
+
+        // Other Parts
+        ctx.lineWidth = 10;
+        ctx.beginPath();
+        ctx.moveTo(100,275);
+        ctx.lineTo(155,275);
+        ctx.lineTo(155,320);
+        ctx.lineTo(100,320);
+        ctx.fill(); 
+        ctx.stroke();
+        ctx.closePath();
+
+        // Other Parts
+        ctx.lineWidth = 5;
+
+        ctx.beginPath();
+        ctx.moveTo(260,275);
+        ctx.lineTo(332,275);
+        ctx.lineTo(332,320);
+        ctx.lineTo(265,320);
+        ctx.lineTo(265,275);
+        ctx.fill(); 
+        ctx.stroke();
+        ctx.closePath();
+
+    </script>
+</body>
+</html>

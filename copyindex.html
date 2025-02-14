@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Manuel Chagoyan - Portfolio</title>
+
+<style>
+/* Mobile First Design */
+/* 
+Note
+primary, secondary, tertiary, quaternary, quinary, senary, septenary, octonary, nonary, denary, duodenary, etc.
+*/
+html {
+scroll-behavior: smooth;
+background-color: white;
+filter: brightness(75%);
+color: beige;
+
+
+}
+body::-webkit-scrollbar{
+    display: none;
+} 
+      /* Reset browser */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+          /* Fix Browser Bounce */
+        body {
+        overflow-x: auto;
+        width: 100%;
+        overscroll-behavior: none;
+    }
+    /* Set page Color with functions/variables */
+:root{
+    --color-primary: rgb(72, 30, 20);
+    --color-secondary: rgb(155, 57, 34);
+    --color-tertiary: rgb(242, 97, 63);
+    --color-quaternary:white;
+    --color-quinary:rgb(26, 77, 51);
+    --color-senary:rgb(189, 136, 65);
+}
+
+.container {
+    background-color: var(--color-senary);
+    min-height: 10rem;
+    max-width: 120rem;
+    padding: 1rem 3rem 1rem 3rem;
+    margin: auto;
+    position: relative;
+    border: 1px solid black;
+}
+#pageheader {
+    background-color: var(--color-primary);
+    min-height: 200px;
+    padding: 1rem;
+    /* border-radius: 10px 10px 0 0 ; */
+    margin: auto;
+}
+#pageheader .container{
+    border: 4px solid var(--color-quaternary);
+}
+#logo {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 75px);
+    transition: all 2s;
+    background-image: url(Images/dc-logo.png);
+    background-size: contain;
+    transition: all 5s;
+}
+#logo:hover{
+transform: rotate(15deg);
+}
+#pagenav {
+    background-color: var(--color-quaternary);
+    min-height: 40px;
+    width: 300px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0px;
+    left: calc(50% - 150px);
+
+}
+#media {
+    background-color: var(--color-primary);
+    border: 10px solid var(--color-secondary);
+    min-height: 300px;
+    padding: 1rem;
+    background-image: url(Images/orangeleaves.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+#career {
+    background-color: var(--color-primary);
+        min-height: 200px;
+        padding: 1rem;
+}
+#pagecontent {
+    background-color: var(--color-primary);
+        min-height: 200px;
+        padding: 1rem;
+}
+#semester1 {
+    background-color: var(--color-quaternary);
+    min-height: 200px;
+    padding: 1rem;
+}
+#semester2 {
+    background-color: var(--color-primary);
+    min-height: 200px;
+    padding: 1rem;
+}
+#pagefooter {
+    background-color: var(--color-quinary);
+    min-height: 75px;
+    padding: 1rem;
+    text-align: center;
+}
+#pagefooter a{
+    color: var(--color-quinary);
+}
+#pagefooter .container{
+    height: 2rem;
+}
+#subfooter {
+    background-color: var(--color-secondary);
+    min-height: 200px;
+    padding: 1rem;
+}
+
+/* a {
+padding: 1rem;
+} */
+
+/* Tablet and Desktop Styles */
+/* Use media queries to detect browser window size */
+
+@media screen and (min-width: 321px) {
+
+}
+
+@media screen and (min-width: 480px) {
+    html{background-color: transparent;}
+}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1024px) {
+    html{
+        background-color: #727272;
+    }
+
+    }
+    #logo {
+        left: 25px;
+    }
+    #media {
+        height: 450px;
+    }
+    #pagenav {
+        top: 0px;
+        right: 0px;
+        left: auto;
+        bottom: auto;
+    }
+
+@media screen and (min-width: 1200px) {
+    #media {
+        height: 600px;
+    }
+}
+/* #subfooter{
+    border-radius:0px 0px 25px 25px ;
+} */
+</style>
+</head>
+<body>
+<!-- begin pageheader -->
+<header id="pageheader">
+        <div class="container">
+<div id="logo"></div>
+<nav id="pagenav">
+    <a href="#career">Career</a>
+    |
+    <a href="#semester1">Semester 1</a>
+    |
+    <a href="#semester2">Semester 2</a>
+</nav>
+</div>
+</header>
+<!-- end pageheader -->
+
+<!-- begin media -->
+<section id="media">Media</section>
+<!-- end media -->
+
+<!-- begin career -->
+<section id="career">
+<div class="container">
+<a name="career"></a>
+<h2>Career</h2>
+</div>
+</section>
+<!-- end career -->
+
+<!-- begin pagecontent -->
+<main id="pagecontent">
+<div class="container">
+    <h2>Introduction</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex delectus dignissimos blanditiis minus, corrupti explicabo impedit, architecto esse ducimus non laboriosam porro dolorum vero autem nihil. Libero ab odit, sequi a repudiandae suscipit assumenda. Magni atque ipsam impedit nemo a ad voluptate in labore libero necessitatibus architecto fuga esse at tempora omnis culpa, incidunt laudantium, ea blanditiis dolorum hic molestias voluptas. Delectus odio at atque, impedit officiis consequatur nostrum odit facere architecto dolorem omnis laborum ducimus, ad nam blanditiis dicta modi doloribus est ratione, laboriosam asperiores eos. Magnam, aspernatur officiis iusto voluptates dolores inventore! Ut illo sunt laboriosam inventore minus?</p>
+</div>
+</main>
+<!-- end pagecontent -->
+
+<!-- begin semester1 -->
+<section id="semester1">
+<div class="container">
+<a name="semester1"></a>
+<h2>Semester1</h2>
+</div>
+</section>
+<!-- end semester1 -->
+
+<!-- begin semester2 -->
+<section id="semester2">
+<div class="container">
+<a name="semester2"></a>
+<h2>Semester2</h2>
+</div>
+</section>
+<!-- end semester2 -->
+
+<!-- begin subfooter
+<footer id="subfooter">
+    <div class="container">PageFooter</div>
+    </footer>
+    end subfooter -->
+
+<!-- begin pagefooter -->
+<footer id="pagefooter">    
+<div class="container">
+    <a href="https://www.chsserver01.org/ " target="_blank">chago</a> |
+    <a href="https://www.w3schools.com/colors/colors_schemes.asp" target="_blank" >color schemes</a> |
+    <a href="#003" target="_blank" >aeries</a></a> |
+    <a href="#004" target="_blank" >chs</a> |
+    <a href="#005" target="_blank" >mycareertech</a> | 
+    <a href="#006" target="_blank" >classroom</a> | 
+    <a href="#007" target="_blank" >codepip</a> |
+    <a href="#008" target="_blank" >minga</a>
+</div>
+</footer>
+<!-- end pagefooter -->
+

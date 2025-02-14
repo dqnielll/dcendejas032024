@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        html{
+            color-scheme: dark;
+        }
+        h1{
+            text-align: center;
+        }
+        body{
+            background-color: grey;
+        }
+        canvas#mycanvas{
+            border: 2px solid whitesmoke;
+            background-color: black;
+            display: block;
+            margin: auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Canvas Exploration</h1>
+
+    <canvas id="mycanvas">
+
+
+
+
+    </canvas>
+    <script>
+        // Create Canvas Variable
+        const myCanvas = window.document.querySelector('#mycanvas');
+        // window.alert(myCanvas);
+        // Set Canvas Size
+        myCanvas.width = 800;
+        myCanvas.height = 400;
+
+        // Enable Drawing
+        const ctx = mycanvas.getContext('2d');
+
+
+        //Draw a Rectangle
+        // Pick a Color
+        ctx.fillStyle = "orange";
+        ctx.fillRect(100, 100, 200, 200);
+
+
+        // Draw a Rectangle
+        // Pick a Color
+        ctx.strokeStyle = "orange";
+        ctx.lineWidth = "10";
+        ctx.strokeRect(400, 100, 200, 200 );
+
+
+    </script>
+</body>
+</html>

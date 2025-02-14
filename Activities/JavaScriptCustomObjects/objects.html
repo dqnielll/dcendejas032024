@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+    <style>
+        html{
+            color-scheme: dark;
+            text-align: center;
+        }
+        img{
+            min-height: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Objects</h1>
+
+
+    
+    <script>
+        // All objects have properties and methods
+        // Window object
+        // window.innerWidth is a property
+        // window.alert() is a method of the window object
+        // Document object
+        // document.title is a prop
+        // document.write is a method
+
+        /* 
+        Methods and Functions are the same
+        Methods are Functions that are for a specific object
+        */
+    
+        // Creating Custom Objects
+        // CAR Objects
+
+        const CAR = {
+            name: 'Porsche 997 Carrera',
+            age:2008, 
+            color:'Sky Blue',
+            type: "2 Door",
+            isFast:true,
+            isExpensive: true,
+            image:'<img id="911" src="Images/2008_Porsche_997_Carrera.jpeg" ',
+            rev: function(){return ' vroommm!'},
+            burnOut: function(){return 'eeeeeeeerr!'},
+            supercharger: function(){return 'weee, weee'},
+            turbo: function(){return 'vrooom, tu, tu, tu ,tu'},
+            
+        }
+
+        // Examine the CAR
+        window.document.write(CAR.name + '<br>')
+        window.document.write(CAR.age + '<br>')
+        window.document.write(CAR.color + '<br>')
+        window.document.write(CAR.type + '<br>')
+        window.document.write(CAR.image + '<br>' + '<br>')
+        window.document.write(CAR.rev() + '<br>')
+        window.document.write(CAR.burnOut() + '<br>')
+        window.document.write(CAR.supercharger() + '<br>')
+        window.document.write(CAR.turbo() + '<br>')
+
+        // window.document.write(CAR.isAlive + '<br>')
+        // window.document.write(CAR.isHappy + '<br>')
+
+
+    // End Script
+    </script>
+</body>
+</html>

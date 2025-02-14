@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Areas On Your Own 2</title>
+    <style>
+        body::-webkit-scrollbar{
+            display:none;
+        }
+
+
+        *{transition: all 2s;
+        color-scheme: dark;
+        color: white;
+            border: 1px solid red;
+    }
+        
+        .container{
+            max-width: 1200px;
+            background-color: red;
+            margin: auto;
+            border: 1px solid black;
+        }
+        #pageheader{
+            min-height: 100px;
+            background-color: rgb(109, 0, 0);
+            margin: auto;
+            border: 1px solid black;
+            grid-area: ph;
+        }
+        nav{
+            min-height: 100px;
+            background-color: cadetblue;
+            margin: auto;
+            border: 1px solid black;
+            grid-area: nav;
+        }
+        #intromedia{
+            min-height: 100px;
+            background-color: antiquewhite;
+            border: 1px solid black;
+            grid-area: inm;
+        }
+        
+        #pagemain{
+            min-height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+            grid-area: pm;
+        }
+        
+        aside{
+            min-height: 100px;
+            background-color: red;
+            grid-area: asi;
+            border: 1px solid black;
+        }
+        #card1, #card2, #card3{
+            min-height: 200px;
+            background-color: rgb(255, 166, 0);
+            border: 1px solid red;
+        
+        }
+
+        #pagefooter{
+            min-height: 100px;
+            background-color: honeydew;
+            border: 1px solid black;
+        }
+        #pagedetail{
+            min-height: 100px;
+        background-color: aquamarine;
+            border: 1px solid black;
+        }
+        .noselect{
+            user-select: none;
+        }
+        /* Table and Desktop Models */
+
+        @media screen and (min-width: 768px){
+            .container{
+                /* display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template:none; */
+                }
+            }
+
+
+
+
+    </style>
+</head>
+<body class="noselect">
+    <div class="container">
+        <div id="wrapper">
+            <header id="pageheader"> Header</header>
+            <nav>Main nav</nav>
+            <div id="intromedia">#intromedia</div>
+            <main id="pagemain">Main</main>
+            <aside>#aside</aside>
+            <section id="card1">#card1</section>
+            <section id="card2">#card2</section>
+            <section id="card3">#card3</section>
+            <footer id="pagefooter">#pagefooter</footer>
+            <div id="pagedetail">#pagedetails</div>
+        </div>
+    </div>
+
+</body>
+</html>
