@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Areas On Your Own 2</title>
+    <style>
+        *{
+            color-scheme: dark;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px solid white;
+        }
+        body::webkit-scrollbar{
+            display:none;
+        }
+        .container{
+            max-width: 1200px;
+            background-color: rgb(79, 0, 0);
+            margin:auto;
+            border: 1px solid black;
+            width: 80%;
+
+        }
+
+        #wrapper{
+            background-color: rgb(195, 57, 57);
+            border: 1px solid black;      
+            max-width: 1000px;      
+            margin: auto;
+            
+
+        }
+        #pageheader{
+            display:grid;
+            grid-area: ph;
+            min-height: 200px;
+            background-color: rgb(255, 165, 6);
+        }
+        #mainnav{
+            display:grid;
+            grid-area: mn;
+            min-height: 200px;
+        background-color: turquoise;            
+        }
+        #intromedia{
+            display:grid;
+            grid-area: im;
+            min-height: 200px;
+            background-color: rgb(145, 238, 143)
+        }
+        #pagemain{
+            display:grid;
+            grid-area:pm ;
+            min-height: 200px;
+            background-color: white;
+        }
+        #card001, #card002{
+            display:grid;
+            min-height: 200px;
+        }
+        #card1{
+            background-color: tomato;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: cd1;
+        }
+
+        #card2{
+            background-color: lightblue;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: cd2;
+        }
+
+        #pagefooter{
+            background-color: yellow;
+            display:grid;
+            grid-area:pf ;
+            min-height: 200px;
+        }
+        #pagedetails{
+            background-color: plum;
+            display:grid;
+            grid-area:pd;
+            min-height: 200px;
+        }
+        /* Mobile Layout */
+        @media screen and (max-width: 767px){
+            #wrapper{
+                background-color: grey;
+                display: grid;
+                gap:10px;
+                background-color: navy;
+                grid-template-areas: 
+                "ph ph ph"
+                "im im im"
+                "mn pm pm"
+                "mn cd1 cd2"
+                "pf pf pf"
+                "pd pd pd"                
+                ;
+            }
+            #card1{
+                min-height: 100px;
+                background-color: lightblue;
+            }
+            #card2{
+                min-height: 100px; 
+                background-color: tomato;}
+            }
+        
+            
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="wrapper">
+            <header id="pageheader">#header</header>
+            <nav id="mainnav">#nav</nav>
+            <media id="intromedia">#media</media>
+            <main id="pagemain">#pagmain</main> 
+                <section id="card1">card001</section>
+                <section id="card2">card002</section>
+
+                <footer id="pagefooter">pagefooter</footer>
+                <div id="pagedetails">pagedetails</div>
+        </div>
+    </div>
+
+</body>
+</html>
