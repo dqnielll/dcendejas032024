@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Layout</title>
+    <style>
+        /* Mobile Design */
+            .container{
+                background-color: purple;
+                max-width: 1200px;
+                width: 90%;
+                padding: 1rem;
+                padding-top: 100px;
+                padding: 20px;
+            }
+            #wrapper{
+            background-color: green;
+            max-width: 90%;
+            display: grid;
+            grid-template-rows: 8, 1fr;
+            grid-template-areas: 
+            "medi"
+            "midn"
+            "main"
+            "sec1"
+            "sec2"
+            "sec3"
+            "page"
+            "subf"
+            ;
+            padding: 1rem;
+            padding-top: 100px;
+            padding: 20px;
+            }
+            #media{
+                background-color: blue;
+                width: 100%;
+                height: 100px;
+                grid-area: medi;
+                position: relative;
+            }
+            #logo{
+                background-color: silver;
+                width: 50px;
+                height: 50px;
+                border: 2px solid white;
+                position: absolute;
+                top: -30px;
+                left: -30px;
+            }
+            #midnav{
+                background-color: aqua;
+                padding: 1rem;
+                grid-area: midn;
+
+            }
+            #midnav ul{
+                color: red;
+            }
+            main{
+                background-color: white;
+                padding: 1rem;
+                grid-area: main;
+}
+
+
+            #pagefooter{
+                background-color: gray;
+                padding: 1rem;
+                grid-area: page;
+            }
+            #subfooter{
+                background-color: beige;
+                padding: 1rem;
+                grid-area: subf;
+            }
+            /* Three Sections */
+            .cards{
+                background-color: beige;
+                padding: 1rem;
+                border: 1px solid silver;
+                border-radius: 6px;
+            }
+            #section01{grid-area: sec1;}
+            #section02{grid-area: sec2;}
+            #section03{grid-area: sec3;}
+
+            /* Desktop Design */
+            @media screen and (min-width: 768px){
+                #wrapper{
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-areas: 
+                    "medi medi medi"
+                    "main main main"
+                    "sec1 sec2 sec3"
+                    "page page page"
+                    "subf subf subf"
+                    ;
+                }
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="wrapper">
+            <header id="pageheader">
+                <nav id="topnav">
+                    <ul>
+                        <li>Yahoo</li>
+                        <li>Yahoo</li>
+                        <li>Yahoo</li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div id="media">
+                <div id="logo"></div>
+            </div>
+
+                <nav id="midnav">
+                    <ul>
+                        <li>.com</li>
+                        <li>.com</li>
+                        <li>.com</li>
+                    </ul>
+                </nav>
+
+
+            <main>Main</main>
+
+
+
+                <section id="section01" class="cards">Section1</section>
+                <section id="section02" class="cards">Section2</section>
+                <section id="section03" class="cards">Section3</section>
+                
+                <footer id="pagefooter">Pagefooter</footer>
+                <footer id="subfooter">Subfooter</footer>
+        </div>
+    </div>
+</body>
+</html>

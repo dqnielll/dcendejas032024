@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images-petAdoption/dogs/smalll/dogFace.jpg">
+     <!-- Google Fonts -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Website</title>
+    <style>˜
+        *{
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            transition: all 2s;
+        }
+        body::webkit-scrollbar{
+            display:none;
+        }
+        .container{
+            max-width: 1200px;
+            background-color: rgb(79, 0, 0);
+            margin:auto;
+            border: 1px solid black;
+            width: 80%;
+        }
+
+        #wrapper{
+
+                background-color: grey;
+                display: grid;
+                gap:10px;
+                background-color: navy;
+                grid-template-areas: 
+                "ph ph ph"
+                "im im im"
+                "mn pm pm"
+                "mn cd1 cd2"
+                "pf pf pf"
+                "pd pd pd"                
+                ;
+
+        }
+        #topnav{
+
+            width: 100%;
+            min-height: 100px;
+            position:relative;
+            backdrop-filter: blur(100px);
+            background-color:red ;
+            margin: 0;
+            padding: 0;
+            
+        }
+        #topnav img{
+background-color: red;
+        }
+        /* #topnav li{
+            display: inline;
+            list-style-type: none;
+            justify-content: space-evenly;
+            text-align: center;
+        } */
+        #topnav ul{
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction:row;
+            justify-content: space-evenly;
+            font-size: larger;
+            gap: 0rem;
+            color: #333;
+            font-family:"Roboto Slab", serif;
+            
+        }
+        #topnav li{
+            text-align: center;
+        }
+
+        #pageheader{
+            display:grid;
+            grid-area: ph;
+            min-height: 200px;
+            background-color: rgb(255, 165, 6);
+            margin: 0;
+            
+        }
+        #mainnav{
+            display:grid;
+            grid-area: mn;
+            min-height: 200px;
+            background-color: turquoise;            
+        }
+
+        #mainnav ul{
+            font-size: larger;
+            font-family: "Roboto Slab", serif;
+            font-weight: 100;
+            list-style-type: none;
+            margin: 20px;
+            padding: 1rem;
+        }
+        /* #mainnav li{} */
+
+
+        #intromedia{
+            display:grid;
+            grid-area: im;
+            min-height: 200px;
+            background-color: rgb(145, 238, 143);
+            background-repeat: no-repeat;
+            background-size: cover; 
+        }
+        #pagemain{
+            display:grid;
+            grid-area:pm ;
+            min-height: 200px;
+            background-color: grey;
+        }
+        #card001, #card002{
+            display:grid;
+            min-height: 200px;
+        }
+        #card1{
+            background-color: tomato;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: cd1;
+        }
+
+        #card2{
+            background-color: lightblue;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: cd2;
+        }
+
+
+        #pagedetails{
+            background-color: burlywood;
+            display:grid;
+            grid-area:pd;
+            min-height: 30px;
+            text-align: center;
+        }
+        /* Mobile Layout */
+        @media screen and (max-width: 767px){
+            #wrapper{
+                background-color: rgb(195, 57, 57);
+            border: 1px solid black;      
+            max-width: 1000px;      
+            margin: auto;
+                grid-template-areas: 
+                "ph ph ph"
+                "im im im"
+                "mn pm pm"
+                "mn mn mn"
+                "pd pd pd"                
+                ;
+            }
+            #card1{
+                min-height: 100px;
+                background-color: lightblue;
+            }
+            #card2{
+                min-height: 100px; 
+                background-color: tomato;}
+            }
+
+    </style>
+</head>
+<body>
+    <div id="topnav">
+    <ul>
+        <!-- <img src="images-petAdoption/cat+dog/large/cat-dog.jpg" alt="cat"> -->
+    <li>Prices</li>
+    <li>Our Animals</li>
+    <li>Donate</li>
+</ul>
+</div>
+<!-- <img src="images-petAdoption/rabbits/medium/rabbits.jpg" alt="Rabbits"> -->
+    <div class="container">
+
+        <div id="wrapper">
+
+            <header id="pageheader">
+                <h1>Pet Adoption Website</h1>                
+            </header>
+
+
+            <nav id="mainnav">
+                <ul>
+                    <li><a href="donate.html" target="_blank">Donate</a></li>
+                    <li><a href="aboutus.html" target="_blank">About Us</a></li>
+                    <li><a href="gallery.html" target="_blank">Gallery</a></li>
+                </ul>
+            </nav>
+            <media id="intromedia">
+                <img src="images-petAdoption/cat+dog/medium/beagleCat.jpg" alt="Beagle Cat">
+            </media>
+            <main id="pagemain"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consequuntur quasi ut saepe magnam accusantium, animi, veniam magni ex ducimus quos nostrum iste? Ut vel rerum quasi doloremque, odio iusto, optio magnam adipisci error, debitis minus veniam ex neque obcaecati ad repellendus nam necessitatibus enim voluptate modi repudiandae. Minus officia sapiente provident quo tempora quibusdam reprehenderit perspiciatis voluptatem dolorem doloribus?</p></main> 
+                <section id="card1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus corporis pariatur, velit explicabo distinctio veritatis assumenda cupiditate eveniet odit qui.</section>
+                <section id="card2"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti aperiam dignissimos id incidunt, unde accusamus vitae doloribus sapiente veritatis non!</p></section>
+
+                <div id="pagedetails">&copy 2025 Career Skills Challenge</div>
+        </div>
+    </div>
+
+</body>
+</html>

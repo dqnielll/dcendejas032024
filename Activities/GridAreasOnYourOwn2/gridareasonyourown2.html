@@ -9,6 +9,7 @@
             color-scheme: dark;
             font-family: Arial, Helvetica, sans-serif;
             border: 1px solid white;
+            transition: all 2s;
         }
         body::webkit-scrollbar{
             display:none;
@@ -23,11 +24,19 @@
         }
 
         #wrapper{
-            background-color: rgb(195, 57, 57);
-            border: 1px solid black;      
-            max-width: 1000px;      
-            margin: auto;
-            
+
+                background-color: grey;
+                display: grid;
+                gap:10px;
+                background-color: navy;
+                grid-template-areas: 
+                "ph ph ph"
+                "im im im"
+                "mn pm pm"
+                "mn cd1 cd2"
+                "pf pf pf"
+                "pd pd pd"                
+                ;
 
         }
         #pageheader{
@@ -52,7 +61,7 @@
             display:grid;
             grid-area:pm ;
             min-height: 200px;
-            background-color: white;
+            background-color: grey;
         }
         #card001, #card002{
             display:grid;
@@ -87,15 +96,15 @@
         /* Mobile Layout */
         @media screen and (max-width: 767px){
             #wrapper{
-                background-color: grey;
-                display: grid;
-                gap:10px;
-                background-color: navy;
+                background-color: rgb(195, 57, 57);
+            border: 1px solid black;      
+            max-width: 1000px;      
+            margin: auto;
                 grid-template-areas: 
                 "ph ph ph"
                 "im im im"
                 "mn pm pm"
-                "mn cd1 cd2"
+                "mn mn mn"
                 "pf pf pf"
                 "pd pd pd"                
                 ;
@@ -122,7 +131,6 @@
             <main id="pagemain">#pagmain</main> 
                 <section id="card1">card001</section>
                 <section id="card2">card002</section>
-
                 <footer id="pagefooter">pagefooter</footer>
                 <div id="pagedetails">pagedetails</div>
         </div>

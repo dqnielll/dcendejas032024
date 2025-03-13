@@ -1,0 +1,51 @@
+body::-webkit-scrollbar{
+    display: none;
+} 
+      /* Reset browser */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+          /* Fix Browser Bounce */
+        body {
+        overflow-x: auto;
+        width: 100%;
+        overscroll-behavior: none;
+    }
+body{
+    color:#333;
+}
+h1{
+    font-family: "Roboto Slab", serif;
+}
+h2{
+    font-family: "Roboto", sans-serif;
+}
+p{
+    line-height: 1.7;
+}
+nav#topnav{
+    background-color: slateblue;
+}
+nav#topnav ul{
+    list-style-type: none; 
+    background-color: red;
+    display: flex;
+    justify-content:center;
+    gap: 1rem;
+    padding: 1rem;
+}
+nav#topnav a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+nav#topnav a:hover{
+    color: #333;
+    text-decoration: underline;
+    transition: all .7s;
+}
+
