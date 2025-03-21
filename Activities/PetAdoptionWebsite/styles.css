@@ -1,0 +1,84 @@
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f1ea; /* Light beige background */
+      color: #5d4037; /* Dark brown text */
+    }
+
+    header {
+      background-color: #6d4c41; /* Medium brown */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #8d6e63; /* Slightly lighter brown */
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    #introduction {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #d7ccc8; 
+    }
+
+    #introduction h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    #introduction p {
+      font-size: 1.2em;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    #media {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #f4f1ea;
+    }
+
+    #media img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      background-color: #6d4c41; 
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+
+    footer a {
+      color: #ffcc80; 
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #593831, #8C5E54);
+            color: #BFB99B;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Full-Screen Layout */
+        .full-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: rgba(166, 46, 46, 0.9);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #BF926B;
+            text-decoration: none;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        nav .logo:hover {
+            transform: scale(1.1);
+            color: #BFB99B;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #BFB99B;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #BF926B;
+            transform: scale(1.1);
+        }
+
+        /* About Section */
+        .about {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .about h1 {
+            font-size: 3rem;
+            margin: 0;
+            color: #BF926B;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            color: #BFB99B;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        .about .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .about .skill-card {
+            background: rgba(191, 185, 155, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .about .skill-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(191, 146, 107, 0.8);
+        }
+
+        .about .skill-card h3 {
+            font-size: 1.5rem;
+            margin: 0 0 10px;
+            color: #BF926B;
+        }
+
+        .about .skill-card p {
+            font-size: 1rem;
+            margin: 0;
+            color: #BFB99B;
+        }
+
+        .about .btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 30px;
+            background: #BF926B;
+            color: #593831;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: transform 0.3s, background 0.3s, color 0.3s;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .about .btn:hover {
+            transform: scale(1.1);
+            background: #A62E2E;
+            color: #BFB99B;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(89, 56, 49, 0.9);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #BFB99B;
+        }
+
+        footer a {
+            color: #BF926B;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #A62E2E;
+        }
+    </style>
+</head>
+<body>
+    <div class="full-screen">
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="index.html" class="logo">MyWorld</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- About Section -->
+        <section class="about">
+            <h1>About Me</h1>
+            <p>
+                Hi, I'm [Your Name], a passionate creator and innovator. I love exploring new ideas, building amazing projects, and sharing my journey with the world. 
+                With a background in [Your Field], I bring creativity and expertise to everything I do. Let's create something extraordinary together!
+            </p>
+
+            <!-- Skills Section -->
+            <div class="skills">
+                <div class="skill-card">
+                    <h3>Web Design</h3>
+                    <p>Creating beautiful and responsive websites.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Graphic Design</h3>
+                    <p>Designing stunning visuals and branding.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Photography</h3>
+                    <p>Capturing moments that tell a story.</p>
+                </div>
+            </div>
+
+            <!-- Call-to-Action Button -->
+            <a href="#" class="btn">Let's Collaborate</a>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+
+            <p>&copy; 2025 | <a href="privacypolicy.html">Privacy Policy</a></p>
+
+        </footer>
+    </div>
+</body>
+</html>

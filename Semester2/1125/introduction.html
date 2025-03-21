@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My World</title>
+    <style>
+        body::--webkit-scrollbar{display: none;}
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #593831, #8C5E54);
+            color: #BFB99B;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Full-Screen Layout */
+        .full-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: rgba(166, 46, 46, 0.9);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #BF926B;
+            text-decoration: none;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        nav .logo:hover {
+            transform: scale(1.1);
+            color: #BFB99B;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #BFB99B;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #BF926B;
+            transform: scale(1.1);
+        }
+
+        /* Introduction Section */
+        .intro {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .intro h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: #BF926B;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            animation: float 3s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .intro p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            color: #BFB99B;
+            max-width: 800px;
+        }
+
+        .intro .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #BF926B;
+            color: #593831;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: transform 0.3s, background 0.3s, color 0.3s;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .intro .btn:hover {
+            transform: scale(1.1);
+            background: #A62E2E;
+            color: #BFB99B;
+        }
+
+        /* Media Section */
+        .media {
+            width: 100%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(191, 185, 155, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .media img {
+            width: 100%;
+            max-height: 600px;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .media img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(191, 146, 107, 0.8);
+        }
+        
+
+        /* Sub-Footer */
+        .sub-footer {
+            background: rgba(89, 56, 49, 0.9);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .sub-footer p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #BFB99B;
+        }
+
+        .sub-footer a {
+            color: #BF926B;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .sub-footer a:hover {
+            color: #A62E2E;
+        }
+    </style>
+</head>
+<body>
+    <div class="full-screen">
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="#" class="logo">MyWorld</a>
+            <ul>
+                <li><a href="introduction.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Introduction Section -->
+        <section class="intro">
+            <h1>Welcome to Mars</h1>
+            <p>Where creativity meets innovation. Explore, discover, and be amazed by the wonders of my universe.</p>
+            <a href="#" class="btn">Explore Now</a>
+        </section>
+
+        <!-- Media Section -->
+        <section class="media">
+            <img src="Images/mars.webp" alt="Placeholder Image">
+        </section>
+
+        <!-- Sub-Footer -->
+        <div class="sub-footer">
+            <p>&copy; 2025 | <a href="privacypolicy.html">Privacy Policy</a></p>
+        </div>
+    </div>
+</body>
+</html>

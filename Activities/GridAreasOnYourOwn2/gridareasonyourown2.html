@@ -20,25 +20,22 @@
             margin:auto;
             border: 1px solid black;
             width: 80%;
-
         }
 
         #wrapper{
-
-                background-color: grey;
-                display: grid;
-                gap:10px;
-                background-color: navy;
-                grid-template-areas: 
+            background-color: grey;
+            display: grid;
+            gap:10px;
+            background-color: navy;
+            grid-template-areas: 
                 "ph ph ph"
                 "im im im"
                 "mn pm pm"
                 "mn cd1 cd2"
                 "pf pf pf"
-                "pd pd pd"                
-                ;
-
+                "pd pd pd";
         }
+
         #pageheader{
             display:grid;
             grid-area: ph;
@@ -49,17 +46,17 @@
             display:grid;
             grid-area: mn;
             min-height: 200px;
-        background-color: turquoise;            
+            background-color: turquoise;            
         }
         #intromedia{
             display:grid;
             grid-area: im;
             min-height: 200px;
-            background-color: rgb(145, 238, 143)
+            background-color: rgb(145, 238, 143);
         }
         #pagemain{
             display:grid;
-            grid-area:pm ;
+            grid-area: pm;
             min-height: 200px;
             background-color: grey;
         }
@@ -84,41 +81,46 @@
         #pagefooter{
             background-color: yellow;
             display:grid;
-            grid-area:pf ;
+            grid-area: pf;
             min-height: 200px;
         }
         #pagedetails{
             background-color: plum;
             display:grid;
-            grid-area:pd;
+            grid-area: pd;
             min-height: 200px;
         }
+
         /* Mobile Layout */
         @media screen and (max-width: 767px){
             #wrapper{
                 background-color: rgb(195, 57, 57);
-            border: 1px solid black;      
-            max-width: 1000px;      
-            margin: auto;
+                border: 1px solid black;
+                max-width: 100%;
+                margin: auto;
                 grid-template-areas: 
-                "ph ph ph"
-                "im im im"
-                "mn pm pm"
-                "mn mn mn"
-                "pf pf pf"
-                "pd pd pd"                
-                ;
+                    "ph"
+                    "im"
+                    "mn"
+                    "pm"
+                    "cd1"
+                    "cd2"
+                    "pf"
+                    "pd";
             }
-            #card1{
+            #card1, #card2{
                 min-height: 100px;
+                max-width: 100%;
+            }
+
+            #card1{
                 background-color: lightblue;
             }
+
             #card2{
-                min-height: 100px; 
-                background-color: tomato;}
+                background-color: tomato;
             }
-        
-            
+        }
 
     </style>
 </head>
@@ -127,14 +129,13 @@
         <div id="wrapper">
             <header id="pageheader">#header</header>
             <nav id="mainnav">#nav</nav>
-            <media id="intromedia">#media</media>
-            <main id="pagemain">#pagmain</main> 
-                <section id="card1">card001</section>
-                <section id="card2">card002</section>
-                <footer id="pagefooter">pagefooter</footer>
-                <div id="pagedetails">pagedetails</div>
+            <section id="intromedia">#media</section>
+            <main id="pagemain">#pagmain</main>
+            <section id="card1">card001</section>
+            <section id="card2">card002</section>
+            <footer id="pagefooter">pagefooter</footer>
+            <div id="pagedetails">pagedetails</div>
         </div>
     </div>
-
 </body>
 </html>
