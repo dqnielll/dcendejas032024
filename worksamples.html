@@ -15,6 +15,42 @@
     #pagecontent {
         min-height: 15rem;
     }
+    .pagecontent{
+        min-height: 15rem;
+    }
+    .pagecontent {
+    background-color: var(--color-primary);
+        min-height: 200px;
+        padding: 1rem;
+}
+.pagecontent h1{text-align: center;}
+.pagecontent h2{text-align: center;}
+img, iframe{
+    border: 2px solid var(--color-primary);
+}
+img{
+    display: block;
+    margin: auto;
+    /* min-width: 100%; */
+    /* height: 600px; */
+    width: 100%;
+}
+
+
+    iframe
+{
+width:100%;
+max-width:1200px;
+aspect-ratio:16/9; 
+display:block;
+margin:auto;
+margin-bottom:2rem;
+
+}
+#pagefooter{
+    display: none;
+}
+#career{display: none;}
 </style>
 </head>
 <body class="noselect">
@@ -42,21 +78,24 @@
 <!-- end pageheader -->
 
 <!-- begin pagecontent -->
-<main id="pagecontent">
+<main class="pagecontent">
     <div class="container">
-        <h2>Introduction</h2>
-        <h3>Git Clone</h3>
-        <br>˜
-        <p>Hello, and welcome to my portfolio! My name is Daniel Cendejas, and Im excited to share my work with you. This is my third year taking this class, and I’ve gained a lot of valuable knowledge and experience along the way.
-            <br> <br>
-            I have a deep passion for computers and technology, which has led me to explore various aspects of coding. I enjoy experimenting with different programming languages and frameworks, always eager to learn new skills and tackle challenging projects.
-            <br> <br>
-            In addition to my tech interests, I have a love for music. Whether I'm playing an instrument or just enjoying my favorite tracks, music is a significant part of my life.
-            <br> <br>
-            Outside of academics, I enjoy offroading adventures, dirtbiking, and riding quads. There's nothing quite like the thrill of exploring the great outdoors and experiencing nature at its finest. These activities not only keep me active but also inspire my creativity and problem-solving skills.
-            <br><br>
-            Thank you for visiting my portfolio! I look forward to sharing my projects and ideas with you.
-            </p>
+        <h2>Work - Samples</h2>
+        <h3>Horned Toad</h3>
+        <img src="WorkSamples/rainbow toad.png" alt="">
+
+        <h3>IceCream Panda</h3>
+        <img src="WorkSamples/icecreampanda.png" alt="">
+
+
+        <h3>Slides</h3>
+        <iframe src="WorkSamples/Daniel Cendejas Garibay - WWI Vocabulary .pdf" ></iframe>
+
+        <h3>Docs</h3>
+        <iframe src="WorkSamples/Daniel Cendejas Garibay - March Word of the Day- Writing.pdf" ></iframe>
+
+        <h3>Docs</h3>
+        <iframe src="WorkSamples/Daniel Cendejas Garibay - Goals- 4th Quarter..pdf" ></iframe>
     </div>
     </main>
     <!-- end pagecontent -->
@@ -94,7 +133,6 @@
     <a href="https://www.w3schools.com/colors/colors_schemes.asp" target="_blank" >color schemes</a> |
     <a href="https://coalingahuron.aeries.net/student/LoginParent.aspx" target="_blank" >aeries</a></a> |
     <a href="https://chs.chusd.org/" target="_blank" >chs</a> |
-    <a href="https://mycareertech.com/" target="_blank" >mycareertech</a> | 
     <a href="https://classroom.google.com/" target="_blank" >classroom</a> | 
     <a href="https://codepip.com/" target="_blank" >codepip</a> |
     <a href="https://minga.io/" target="_blank" >minga</a>
@@ -117,7 +155,20 @@
 <div id="flexsubfooter">
 
 
-
+    <br> <br>
+            <div class="footerlinks">
+                <h3>Links</h3>
+    
+                <a href="index.html"><li>Home</li></a>
+                <a href="worksamples.html"><li>Work Samples</li></a>
+                <a href="certificates.html"><li>Certificates</li></a>
+    
+                <!-- <li>Semester2</li> -->
+            </div>
+    
+    
+    </footer>
+        <!-- end subfooter -->
     <div id="top">
         <a href="#topanchor">Top</a>
     </div>

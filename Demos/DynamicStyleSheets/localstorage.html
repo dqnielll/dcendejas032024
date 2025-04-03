@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+
+    <style>
+        html{
+            color-scheme: dark;
+        }
+
+        h1{
+            text-align: center;
+            color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Local Storage</h1>
+
+    
+    <script>
+        // Local Storage
+    window.localStorage.clear();
+    console.log("Daniel");
+    console.log(localStorage.length);
+
+    // Create Object
+    teacher = {
+        name: "Daniel",
+        age: 30,
+        gender: "Male",
+        isMarried: false,
+        hobbies: ["Coding", "Gaming", "Reading"],
+        address: {
+            street: "123 Main St",
+            city: "New York",
+            state: "NY",
+            zip: "10001"
+        }
+    };
+
+    // Store Object in Local Storage
+    // alert(teacher);
+    console.log(teacher.name);
+    console.log(teacher.age);
+    console.log(teacher.gender);
+    console.log(teacher.isMarried);
+    
+    
+    // Store object information Local Storage
+
+    localStorage.setItem("teacher", teacher.name);
+    localStorage.setItem("age", teacher.age);
+    localStorage.setItem("gender", teacher.gender);
+    localStorage.setItem("isMarried", teacher.isMarried);
+    localStorage.setItem("hobbies", teacher.hobbies);
+    localStorage.setItem("address", teacher.address);
+
+    // Clear local Storage
+    // localStorage.clear();
+console.log(    localStorage.getItem("class"));
+
+
+    </script>
+</body>
+</html>
