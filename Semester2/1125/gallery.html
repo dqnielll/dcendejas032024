@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #4a2f2f, #7a4f4f);
+            color: #E8D9C1;
+        }
+
+        nav {
+            background: rgba(166, 46, 46, 0.9);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #BF926B;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #E8D9C1;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav ul li a:hover {
+            color: #BF926B;
+        }
+
+        .gallery-container {
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-section {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .gallery-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .gallery-text {
+            flex: 1 1 300px;
+            font-size: 1.2rem;
+            color: #E8D9C1;
+        }
+
+        .gallery-img {
+            flex: 1 1 300px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .gallery-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-img:hover {
+            box-shadow: 0 0 25px rgba(191, 146, 107, 0.8);
+        }
+
+        .sub-footer {
+            background: rgba(89, 56, 49, 0.9);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .sub-footer p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #BFB99B;
+        }
+
+        .sub-footer a {
+            color: #BF926B;
+            text-decoration: none;
+        }
+
+        .sub-footer a:hover {
+            color: #A62E2E;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#" class="logo">MyWorld</a>
+        <ul>
+            <li><a href="introduction.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section class="gallery-container">
+        <div class="gallery-section">
+            <div class="gallery-img">
+                <img src="Images/mars.webp"Mars Landscape 1">
+            </div>
+            <div class="gallery-text">
+                <p>Behold the rugged terrain of Mars — a place where dust devils swirl and the silence of space echoes across the red rocks.</p>
+            </div>
+        </div>
+        <div class="gallery-section">
+            <div class="gallery-img">
+                <img src="Images/mars.webp" alt="Mars Rover">
+            </div>
+            <div class="gallery-text">
+                <p>The Mars Rover, humanity's mechanical pioneer, scanning the surface for signs of life and stories hidden in the soil.</p>
+            </div>
+        </div>
+        <div class="gallery-section">
+            <div class="gallery-img">
+                <img src="Images/mars.webp" alt="Sunset on Mars">
+            </div>
+            <div class="gallery-text">
+                <p>A Martian sunset — colder, bluer, quieter than anything Earth could imagine, yet stunning in its alien beauty.</p>
+            </div>
+        </div>
+        <div class="gallery-section">
+            <div class="gallery-img">
+                <img src="Images/mars.webp" alt="Martian Crater">
+            </div>
+            <div class="gallery-text">
+                <p>Impact craters tell the history of Mars’ violent past. Each scar a chapter of cosmic chaos and creation.</p>
+            </div>
+        </div>
+        <div class="gallery-section">
+            <div class="gallery-img">
+                <img src="Images/mars.webp" alt="Colonization Concept">
+            </div>
+            <div class="gallery-text">
+                <p>Concepts of future colonization spark the imagination — humans building homes where no life has ever lived.</p>
+            </div>
+        </div>
+        <div class="gallery-section">
+            <div class="gallery-img">
+                <img src="Images/mars.webp" alt="Astronaut on Mars">
+            </div>
+            <div class="gallery-text">
+                <p>An astronaut stands alone — not in solitude, but in triumph, carrying the dreams of Earth into the Martian dawn.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sub-Footer -->
+    <div class="sub-footer">
+        <p>&copy; 2025 | <a href="privacypolicy.html">Privacy Policy</a></p>
+    </div>
+</body>
+</html>

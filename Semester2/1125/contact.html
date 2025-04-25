@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Mars World</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #4a2f2f, #7a4f4f);
+            color: #E8D9C1;
+        }
+
+        nav {
+            background: rgba(166, 46, 46, 0.9);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #BF926B;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #E8D9C1;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav ul li a:hover {
+            color: #BF926B;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 20px;
+            background-color: rgba(191, 146, 107, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+        }
+
+        .contact-container h2 {
+            text-align: center;
+            color: #BF926B;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form label {
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            background-color: #BF926B;
+            color: #4a2f2f;
+            border: none;
+            font-size: 1.1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #A62E2E;
+            color: #fff;
+        }
+
+        .sub-footer {
+            background: rgba(89, 56, 49, 0.9);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .sub-footer p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #BFB99B;
+        }
+
+        .sub-footer a {
+            color: #BF926B;
+            text-decoration: none;
+        }
+
+        .sub-footer a:hover {
+            color: #A62E2E;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#" class="logo">MyWorld</a>
+        <ul>
+            <li><a href="introduction.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Section -->
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Sub-Footer -->
+    <div class="sub-footer">
+        <p>&copy; 2025 | <a href="privacypolicy.html">Privacy Policy</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Forms</title>
+    <style>
+        html{
+            color-scheme: light;
+        }
+        body{
+            background-color: #333;
+        }
+        h1{
+            color: white;
+            text-align: center;
+        }
+        div#formcontainer{
+            width:80%;
+            max-width: 600px;
+            min-height:300px;
+            padding: 1rem;
+            background-color: silver;
+            border: 2px solid palegreen;
+            margin:auto;
+        }
+        p{
+            background-color: white;
+            border: 1px solid green;
+            padding: 1rem;
+            margin: auto;
+            max-width: 500px;
+            min-height: 200px;
+        }
+
+        fieldset{
+            padding: 1rem;
+            margin: 1rem;
+        }
+        legend{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        label{
+            padding: .25rem;
+        }
+        input[type="text"]{
+            background-color: white;;    
+            border: 2px solid black;
+        }
+        input[type="text"]{
+            color: gray;
+            font-family: italic;
+        }
+        button{
+            padding: 1rem;
+            background-color: black;
+            color: white;
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+        }
+        input[name="language"]{
+            outline: 2px solid black ;
+            outline-style: dashed;
+        }
+        input[name="language"]:checked{
+            accent-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Forms</h1>
+
+
+        <div id="formcontainer">
+<fieldset> <legend>Text Input Element</legend>
+                <label for="textname">Enter your name:</label>  <br>
+                <input type="text" id="textname" placeholder="John Doe"><br>
+
+                <button id="savetextbutton">Save Text to Local Storage</button>
+                <button id="loadtextbutton">Load Text from Local Storage</button>
+                <!-- End text fieldset -->
+</fieldset>
+
+<fieldset><legend>Radio Input Element</legend>
+<input type="radio" id="radhtml" value="html" name="language"> <label for="radhtml">HTML</label>
+<input type="radio" id="radcss" value="css" name="language" > <label for="radcss">CSS+</label>
+<input type="radio" id="radjavascript" value="javascript" name="language"> <label for="radjavasript">JavaScript</label><br>
+
+<button id="savedradiobutton">Save Radio to Local Storage</button>
+<button id="loadradiobutton">Load Radio from Local Storage</button>
+<!-- End radio fielset -->
+</fieldset>
+
+<fieldset><legend>Select Element</legend>
+    <select name="themeselector" id="themeselector">
+        <option value="redtheme">Red Theme</option>
+        <option value="greentheme">Green Theme</option>
+        <option value="yellowtheme">Yellow Theme</option>
+    </select><br>
+    
+    <button id="saveselectbutton">Save Select to Local Storage</button><br>
+    <button id="loadselectbutton">Load Select from Local Storage</button><br>
+    
+    </fieldset>
+    
+    <p name="paragaphoutput" id="paragraphoutput"></p>
+    
+    </div>
+    
+    <script>
+        // The display paragraph 
+        const paragraphoutput = document.getElementById('paragraphoutput');
+    
+        /* 
+        Text Section
+        Add event listener to buttons when the save button is clicked
+        save to local storage
+        */
+        let saveTextButton;
+        saveTextButton = document.querySelector('#savetextbutton');
+    
+        let loadTextButton;
+        loadTextButton = document.querySelector('#loadtextbutton');
+    
+        // Add event listener
+        saveTextButton.addEventListener('click', function(){
+            let textName;
+            textName = document.querySelector('#textname').value;
+
+            if(textName.trim() !==""){
+                localStorage.setItem('textUserName1125', textName);
+            }
+            else{
+                alert('Please enter a name');
+            }
+        });
+    
+        loadTextButton.addEventListener('click',function(){
+            let savedTextName;
+            savedTextName = localStorage.getItem('textUserName1125');
+            if(savedTextName !== null){
+                paragraphoutput.textContent =`Hello, ${savedTextName}`;
+            }
+            else{
+                paragraphoutput.textContent = 'No name found in local storage';
+            }
+        })
+        
+        // Radio Station
+
+        let savedRadioButton;
+        savedRadioButton = document.querySelector('#savedradiobutton');
+        // alert(savedRadioButton);
+
+        let loadRadioButton;
+        loadRadioButton = document.querySelector('#loadradiobutton');
+        // alert(loadRadioButton);
+        savedRadioButton.addEventListener('click', function(){
+            let radioValue;
+            selectedRadio = document.querySelector('input[name="language"]:checked')
+            alert(selectedRadio);
+
+            if(selectedRadio == null){
+                alert('Please select a radio button');
+
+            }
+            else{                
+                radioValue = selectedRadio.value;
+                localStorage.setItem('selectedLanguage1125', selectedRadio.value)
+            }
+        });
+</script>
+    
+    
+    
+    </body>
+    
+    </html>
