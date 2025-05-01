@@ -2,14 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Images//logo.jpeg">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Mars World</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
+        html, body {
+            height: 100%;
             margin: 0;
             font-family: 'Arial', sans-serif;
             background: linear-gradient(135deg, #4a2f2f, #7a4f4f);
             color: #E8D9C1;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         nav {
@@ -99,11 +107,17 @@
             color: #fff;
         }
 
+        /* This wrapper will take up all available space */
+        .content-wrapper {
+            flex: 1;
+        }
+
         .subfooter {
             background: rgba(89, 56, 49, 0.9);
             padding: 20px;
             text-align: center;
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+            width: 100%;
         }
 
         .subfooter p {
@@ -134,21 +148,24 @@
         </ul>
     </nav>
 
-    <!-- Contact Section -->
-    <div class="contactContainer">
-        <h2>Contact Us</h2>
-        <form class="contactForm">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- Contact Section -->
+        <div class="contactContainer">
+            <h2>Contact Us</h2>
+            <form class="contactForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
 
-            <button type="submit">Send Message</button>
-        </form>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </div>
 
     <!-- subfooter -->
