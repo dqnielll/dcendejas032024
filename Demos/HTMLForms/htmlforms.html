@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML - Forms</title>
+    <link rel="stylesheet" href="redtheme.css" id="linktheme">
     <style>
-        html{
+        /* html{
             color-scheme: light;
         }
         body{
             background-color: #333;
-        }
+        } */
         h1{
-            color: white;
+            color: black;
             text-align: center;
         }
         div#formcontainer{
@@ -21,7 +22,7 @@
             min-height:300px;
             padding: 1rem;
             background-color: silver;
-            border: 2px solid palegreen;
+            /* border: 2px solid palegreen; */
             margin:auto;
         }
         p{
@@ -45,7 +46,7 @@
         }
         input[type="text"]{
             background-color: white;;    
-            border: 2px solid black;
+            /* border: 2px solid red; */
         }
         input[type="text"]{
             color: gray;
@@ -59,11 +60,11 @@
             margin-bottom: .5rem;
         }
         input[name="language"]{
-            outline: 2px solid black ;
+            /* outline: 2px solid black ; */
             outline-style: dashed;
         }
         input[name="language"]:checked{
-            accent-color: palegreen;
+            accent-color: black;
         }
     </style>
 </head>
@@ -84,7 +85,7 @@
 <fieldset><legend>Radio Input Element</legend>
 <input type="radio" id="radhtml" value="html" name="language"> <label for="radhtml">HTML</label>
 <input type="radio" id="radcss" value="css" name="language" > <label for="radcss">CSS+</label>
-<input type="radio" id="radjavascript" value="javascript" name="language"> <label for="radjavasript">JavaScript</label><br>
+<input type="radio" id="radjavascript" value="javascript" name="language"> <label for="radjavascript">JavaScript</label><br>
 
 <button id="savedradiobutton">Save Radio to Local Storage</button>
 <button id="loadradiobutton">Load Radio from Local Storage</button>
@@ -92,14 +93,14 @@
 </fieldset>
 
 <fieldset><legend>Select Element</legend>
-    <select name="themeselector" id="themeselector">
-        <option value=" Red Theme">Red Theme</option>
-        <option value=" Green theme">Green Theme</option>
-        <option value=" Yellow theme">Yellow Theme</option>
+    <select name="themeselector" id="themeselector" onchange="updateTheme()">
+        <option value="redtheme.css">Red Theme</option>
+        <option value="greentheme.css">Green Theme</option>
+        <option value="bluetheme.css">Blue Theme</option>
     </select><br>
     
-    <button id="saveselectbutton">Save Select to Local Storage</button><br>
-    <button id="loadselectbutton">Load Select from Local Storage</button><br>
+    <!-- <button id="saveselectbutton">Save Select to Local Storage</button><br>
+    <button id="loadselectbutton">Load Select from Local Storage</button><br> -->
     
     </fieldset>
     
@@ -184,28 +185,34 @@
             }
         });
 
-        // Select Element Section
-        let saveSelectButton = document.querySelector('#saveselectbutton');
-        let loadSelectButton = document.querySelector('#loadselectbutton');
-        let themeSelector = document.querySelector('#themeselector');
+        // Select Section
+        let linkTheme; // Link tag to the stylesheet
+        let selTheme; // Selection form control to select theme
+        
+        linkTheme = document.querySelector('#linktheme');
+        // alert(linkTheme);
+        selTheme = document.querySelector('#themeselector');
+        // alert(selTheme);
+        // Save the selected theme to local storage
+        function updateTheme() {
+            // alert();
+            linkTheme.href = selTheme.value;
+            // alert(selTheme.value);
+            localStorage.setItem('selectedTheme1125', selTheme.value);
+        }
+    window.addEventListener('load', function(){
+        // Check if there is a saved theme in local storage
+        let savedTheme = localStorage.getItem('selectedTheme1125');
+        if(savedTheme !== null){
+            // Set the selected theme
+            linkTheme.href = savedTheme; // Load stylesheet
+            selTheme.value = savedTheme;
+            // Provide feedback in paragraph output
+            paragraphOutput.textContent = `Theme: ${savedTheme} loaded from localStorage!` ;
 
-        // Save select value to local storage
-        saveSelectButton.addEventListener('click', function(){
-            let selectedTheme = themeSelector.value;
-            localStorage.setItem('selectedTheme1125', selectedTheme);
-            alert('Theme preference saved!');
-        });
-
-        // Load select value from local storage
-        loadSelectButton.addEventListener('click', function(){
-            let savedTheme = localStorage.getItem('selectedTheme1125');
-            if(savedTheme !== null){
-                themeSelector.value = savedTheme;
-                paragraphOutput.textContent = `Selected theme: ${savedTheme}`;
-            } else {
-                paragraphOutput.textContent = 'No theme preference found in local storage';
-            }
-        });
+            updateTheme();
+        }
+    });
         
 </script>
     

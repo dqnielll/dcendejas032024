@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(142, 180, 133);
+
+}
+div#formcontainer{
+    border: 2px solid green;
+}
+#paragraphOutput{
+    border: 2px solid green;
+}
+input[name="language"]{
+    outline: 2px solid green ;
+    outline-style: dashed;
+}
