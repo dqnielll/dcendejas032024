@@ -49,7 +49,7 @@
         }
         input[type="text"]{
             color: gray;
-            font-family: italic;
+            font-style: italic;
         }
         button{
             padding: 1rem;
@@ -63,7 +63,7 @@
             outline-style: dashed;
         }
         input[name="language"]:checked{
-            accent-color: green;
+            accent-color: palegreen;
         }
     </style>
 </head>
@@ -93,9 +93,9 @@
 
 <fieldset><legend>Select Element</legend>
     <select name="themeselector" id="themeselector">
-        <option value="redtheme">Red Theme</option>
-        <option value="greentheme">Green Theme</option>
-        <option value="yellowtheme">Yellow Theme</option>
+        <option value=" Red Theme">Red Theme</option>
+        <option value=" Green theme">Green Theme</option>
+        <option value=" Yellow theme">Yellow Theme</option>
     </select><br>
     
     <button id="saveselectbutton">Save Select to Local Storage</button><br>
@@ -103,13 +103,13 @@
     
     </fieldset>
     
-    <p name="paragaphoutput" id="paragraphoutput"></p>
+    <p name="paragaphoutput" id="paragraphOutput"></p>
     
     </div>
     
     <script>
         // The display paragraph 
-        const paragraphoutput = document.getElementById('paragraphoutput');
+        const paragraphOutput = document.getElementById('paragraphOutput');
     
         /* 
         Text Section
@@ -129,6 +129,7 @@
 
             if(textName.trim() !==""){
                 localStorage.setItem('textUserName1125', textName);
+                alert('Name saved: ' + textName);
             }
             else{
                 alert('Please enter a name');
@@ -139,10 +140,10 @@
             let savedTextName;
             savedTextName = localStorage.getItem('textUserName1125');
             if(savedTextName !== null){
-                paragraphoutput.textContent =`Hello, ${savedTextName}`;
+                paragraphOutput.textContent =`Hello, ${savedTextName}`;
             }
             else{
-                paragraphoutput.textContent = 'No name found in local storage';
+                paragraphOutput.textContent = 'No name found in local storage';
             }
         })
         
@@ -156,19 +157,56 @@
         loadRadioButton = document.querySelector('#loadradiobutton');
         // alert(loadRadioButton);
         savedRadioButton.addEventListener('click', function(){
-            let radioValue;
-            selectedRadio = document.querySelector('input[name="language"]:checked')
-            alert(selectedRadio);
+            let selectedRadio = document.querySelector('input[name="language"]:checked');
 
             if(selectedRadio == null){
                 alert('Please select a radio button');
-
             }
             else{                
-                radioValue = selectedRadio.value;
-                localStorage.setItem('selectedLanguage1125', selectedRadio.value)
+                let radioValue = selectedRadio.value;
+                localStorage.setItem('selectedLanguage1125', radioValue);
+                // alert('Language preference saved: ' + radioValue);
             }
         });
+
+        loadRadioButton.addEventListener('click', function(){
+            let savedLanguage = localStorage.getItem('selectedLanguage1125');
+            
+            if(savedLanguage !== null){
+                // Find the radio button with the saved value and check it
+                let radioToCheck = document.querySelector(`input[name="language"][value="${savedLanguage}"]`);
+                if(radioToCheck !== null){
+                    radioToCheck.checked = true;
+                    paragraphOutput.textContent = `Selected language: ${savedLanguage}`;
+                }
+            } else {
+                paragraphOutput.textContent = 'No language preference found in local storage';
+            }
+        });
+
+        // Select Element Section
+        let saveSelectButton = document.querySelector('#saveselectbutton');
+        let loadSelectButton = document.querySelector('#loadselectbutton');
+        let themeSelector = document.querySelector('#themeselector');
+
+        // Save select value to local storage
+        saveSelectButton.addEventListener('click', function(){
+            let selectedTheme = themeSelector.value;
+            localStorage.setItem('selectedTheme1125', selectedTheme);
+            alert('Theme preference saved!');
+        });
+
+        // Load select value from local storage
+        loadSelectButton.addEventListener('click', function(){
+            let savedTheme = localStorage.getItem('selectedTheme1125');
+            if(savedTheme !== null){
+                themeSelector.value = savedTheme;
+                paragraphOutput.textContent = `Selected theme: ${savedTheme}`;
+            } else {
+                paragraphOutput.textContent = 'No theme preference found in local storage';
+            }
+        });
+        
 </script>
     
     
