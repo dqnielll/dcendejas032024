@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dmoney Portfolio</title>
-  <link id="theme-link" rel="stylesheet" href="light.css">
+  <title>Daniels Portfolio</title>
+  <link id="themeLink" rel="stylesheet" href="light.css">
   <link rel="icon" href="logo-light.png" id="favicon">
 </head>
 <body>
   <header>
-    <img id="logo" src="logo-light.png" alt="Logo" height="50">
+    <img id="logo" src="logo-light.png" alt="" height="50">
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -20,24 +20,24 @@
   <main>
     <section id="about">
       <h1>Welcome to My Portfolio</h1>
-      <p>I'm Dmoney, a high school student passionate about tech and design.</p>
+      <p>I'm Daniel, a high school student passionate about tech and design.</p>
     </section>
 
     <section id="projects" class="card-container">
       <div class="card">
         <h2>Project 1</h2>
         <p>Description of project 1.</p>
-        <a href="#">View</a>
+        <a href="#">Visit</a>
       </div>
       <div class="card">
         <h2>Project 2</h2>
         <p>Description of project 2.</p>
-        <a href="#">View</a>
+        <a href="#">Visit</a>
       </div>
       <div class="card">
         <h2>Project 3</h2>
         <p>Description of project 3.</p>
-        <a href="#">View</a>
+        <a href="#">Visit</a>
       </div>
     </section>
   </main>
@@ -49,26 +49,35 @@
     <a href="mailto:your@email.com">Email</a>
   </footer>
 
-  <script>
-    const themeLink = document.getElementById('theme-link');
+  <script> 
+    const themeLink = document.getElementById('themeLink');
     const logo = document.getElementById('logo');
     const favicon = document.getElementById('favicon');
 
-    // Load theme from localStorage
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(savedTheme);
-
     function toggleTheme() {
-      const currentTheme = themeLink.getAttribute('href').includes('light') ? 'dark' : 'light';
-      setTheme(currentTheme);
-      localStorage.setItem('theme', currentTheme);
+      const isLight = themeLink.getAttribute('href') === 'light.css';
+      const newTheme = isLight ? 'dark' : 'light';
+
+      themeLink.href = `${newTheme}.css`;
+      logo.src = `logo-${newTheme}.png`;
+      favicon.href = `logo-${newTheme}.png`;
+      localStorage.setItem('theme', newTheme);
     }
 
-    function setTheme(theme) {
-      themeLink.setAttribute('href', theme + '.css');
-      logo.setAttribute('src', `logo-${theme}.png`);
-      favicon.setAttribute('href', `logo-${theme}.png`);
-    }
+    // Apply saved theme on page load
+    (function () {
+      const saved = localStorage.getItem('theme') || 'light';
+      themeLink.href = `${saved}.css`;
+      logo.src = `logo-${saved}.png`;
+      favicon.href = `logo-${saved}.png`;
+    })();
+
+    // Add this inside your script tag to debug logo loading
+    window.addEventListener('error', function(e) {
+      if (e.target.tagName === 'IMG') {
+        console.error('Image failed to load:', e.target.src);
+      }
+    }, true);
   </script>
 </body>
 </html>
