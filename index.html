@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,43 @@
 <meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 <title>‎  Daniel's Personal Porfolio</title>
 <link rel="stylesheet" href="style.css">
-<style>#topnav{display: none;}</style>
+<style>
+#topnav{display: none;}
+
+      #career .container ul{
+    background-color: none;
+    list-style-type:none ;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 650px;
+    margin: auto;
+    }
+    #career .container li{
+    background-color: var(--color-tertiary);
+    width: 140px;
+    height: 120px;
+    padding: 1.2rem;
+    text-align: center center;
+    border: 3px solid var(--color-quinary)    }
+    #career li img{
+        width: 50%;
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+
+    /* Updated careerheight class */
+    .careerheight{
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+</style>
 </head>
 <body class="noselect">
     <!-- Named anchor to navigate to the top. -->
@@ -44,7 +79,7 @@
 
 <!-- begin media -->
 <section id="media">
-    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3NkayiEGfYI?si=YNEgj2Yzi4_mtm9Q&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3NkayiEGfYI?si=YNEgj2Yzi4_mtm9Q&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 </section>
 <!-- end media -->
@@ -55,13 +90,38 @@
 <a name="career"></a>
 <h2>Career</h2>
 <ul>
-    <li><a target="_new" href="Career/Template Letter of Introduction.pdf"> &nbsp Letter of Introduction</a></li>
-    <li><a target="_new" href="Career/Resume.pdf"> &nbsp Resume</a></li>
-    <li><a target="_new" href="Career/Daniel Cendejas Garibay - References (WAD).pdf"> &nbsp Refrences</a></li>
-    <li><a target="_new" href="Career/Sample Application.pdf">  &nbsp    Job Application</a></li>
-    <li><a target="_new" href="Career/Template Career Action Plan.pdf">  &nbsp   Career Plan</a></li>
-    <li><a target="_new" href="#Career/Work Sample">   &nbsp     Work Samples</a></li>
-    <li><a target="_new" href="#Career/Certificate">    &nbsp    Certificate</a></li>
+    <li><a target="_new" href="Career/Template Letter of Introduction.pdf"> <div class="careerheight">Letter of Introduction</div></a>
+            <img src="Images/letterOfReccomendation.svg" alt="Letter of Introduction Image">
+    </li>
+        
+    <li><a target="_new" href="Career/DCendejas LOR.pdf-">  <div class="careerheight">Letter of Recommendation</div></a>
+        <img src="Images/letterOfIntroduction.svg" alt="Letter of Recommendation Images">
+
+    </li>
+    <li><a target="_new" href="Career/Resume.pdf">  <div class="careerheight">Resume</div>     </a>
+        <img src="Images/ResumeImage.svg" alt="Resume Image">
+
+    </li>
+    <li><a target="_new" href="Career/Daniel Cendejas Garibay - References (WAD).pdf"><div class="careerheight">References</div></a>
+        <img src="Images/Referenceslogo.svg" alt="References Image">
+
+    </li>
+    <li><a target="_new" href="Career/Sample Application.pdf"><div class="careerheight">Job Application</div></a>
+        <img src="Images/jobApplicationLogo.svg" alt="Job Application Image">
+
+    </li>
+    <li><a target="_new" href="Career/Template Career Action Plan.pdf">     <div class="careerheight">Career Plan</div></a>
+        <img src="Images/CareerActionPlan.svg" alt="Career Action Plan Image">
+
+    </li>
+    <li><a target="_new" href="worksamples.html">        <div class="careerheight">Work Samples</div></a>
+    
+        <img src="Images/WorkSamplesLogo.svg" alt="Career Action Plan Image"></li>
+
+    <li><a target="_new" href="certificates.html">        <div class="careerheight">Certificate</div></a>
+        <img src="Images/CertificateLogo.svg" alt="Certificate Image">
+    </li>
+    
 </ul>
 </div>
 </section>
