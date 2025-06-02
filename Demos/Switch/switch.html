@@ -52,6 +52,7 @@
             let gradePercentageEnglish;
             let gradePercentagePE;
 
+            // Math.random() gives a random number between 0 and 100
             gradePercentageHistory = Math.floor(Math.random() * 101); // 0-100
             gradePercentageEnglish = Math.floor(Math.random() * 101); // 0-100  
             gradePercentagePE = Math.floor(Math.random() * 101); // 0-100
@@ -78,7 +79,47 @@
                 console.log('You got a F in History ')
             }
 
-            
+            //  Calculate english letter grade
+            switch(true){
+                case gradePercentageEnglish >= 90:
+                        console.log('You got a A in English');
+                    break;
+                case gradePercentageEnglish >= 80:
+                        console.log('You got a B in English');
+                    break;
+                case gradePercentageEnglish >= 70:
+                        console.log('You got a C in English');
+                    break;
+                case gradePercentageEnglish >= 60:
+                        console.log('You got a D in English');
+                    break;
+                default:
+                        console.log('You got a F in English');
+                    break;
+
+            };
+
+            //  Calculate PE letter grade
+            switch(true){
+                case gradePercentagePE >= 90:
+                        console.log('You got a A in PE');
+                    break;
+                case gradePercentagePE >= 80:
+                        console.log('You got a B in PE');
+                    break;
+                case gradePercentagePE >= 70:
+                        console.log('You got a C in PE');
+                    break;
+                case gradePercentagePE >= 60:
+                        console.log('You got a D in PE');
+                    break;
+                default:
+                        console.log('You got a F in PE');
+                    break;
+
+            };
+
+
         </script>
 </body>
 </html>
